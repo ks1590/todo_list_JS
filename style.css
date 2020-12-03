@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #e2c35d, #d88771);
+  background-image: linear-gradient(120deg, #cfd8f1, #60a2ce);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -32,14 +32,14 @@ form button {
 }
 
 form button {
-  color: #d88771;
+  color: #645bd6;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form button:hover {
-  background: #d88771;
+  background: #645bd6;
   color: white;
 }
 
@@ -71,7 +71,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  background: #645bd6;
   color: white;
   border: none;
   padding: 1rem;
@@ -95,4 +95,43 @@ form button:hover {
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+.fall {
+  transform:translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #645bd6;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1.2rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #645bd6;
+  top: 0;
+  right: 0;
+  padding: 1.2rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: #645bd6;
 }
